@@ -146,6 +146,9 @@ TARGET_LD_SHIM_LIBS := /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat
         /system/lib/hw/camera.vendor.msm8226.so|libshim_atomic.so \
         /system/vendor/bin/mpdecision|libshim_atomic.so
 
+# Shipping API level (for CTS backward compatibility)
+PRODUCT_SHIPPING_API_LEVEL := 19
+
 # Time services
 # TODO (needs libtime_genoff)
 # BOARD_USES_QC_TIME_SERVICES := true
