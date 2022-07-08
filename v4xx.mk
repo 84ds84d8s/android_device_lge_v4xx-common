@@ -116,6 +116,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy \
     Snap \
     camera.msm8226 \
     libcamera_parameters_shim \
@@ -126,7 +128,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.memtrack@1.0-impl \
     copybit.msm8226 \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
@@ -246,6 +247,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/configs/mediaextractor.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
+# USB HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \
