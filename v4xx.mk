@@ -22,6 +22,9 @@ $(call inherit-product-if-exists, vendor/lge/v4xx-common/v4xx-common-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
+# Set lowram options
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.config.low_ram=true \
 
 # Permissions
 PRODUCT_COPY_FILES += \
